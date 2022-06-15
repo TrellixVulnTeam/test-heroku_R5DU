@@ -7,18 +7,16 @@ import {
     selectProjeto,
     deleteProjeto, 
 } from './Projeto.js';
-const router = express.Router();
-//import { router } from './routes.js';
-//import axios from 'axios';
-//import express from 'express';
 
-const express = require('express');
+import { router } from './routes.js';
+//import axios from 'axios';
+import express from 'express';
 
 const app = express();
 app.use(express.json());
 //const PORT = 3000;
-const bodyParser = require('body-parser');
-//import bodyParser from "body-parser";
+
+import bodyParser from "body-parser";
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static("./"))
