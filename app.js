@@ -14,12 +14,12 @@ import express from 'express';
 
 const app = express();
 app.use(express.json());
-//const PORT = 3000;
+const PORT = 3000;
 
 import bodyParser from "body-parser";
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static("./"))
+app.use(express.static("views"))
 
 createTable();
 
@@ -75,6 +75,6 @@ app.delete('/projeto/:id', async (req, res) =>{
 });
 
 
-app.listen(process.env.PORT, () =>
+app.listen(PORT, () =>
   console.log(`Page server running`)
 );
